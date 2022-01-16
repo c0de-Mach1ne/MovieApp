@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="nameFilms">Avengers:\nEndgame</string>
+    <string name="genreOfFilms">Action, Adventure, Fantasy</string>
+    <string name="rating_number">125 Reviews</string>
+    <string name="back">Back</string>
+</resources>
