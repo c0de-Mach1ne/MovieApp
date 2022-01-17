@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="rad">
+        <item name="cornerRadius">4dp</item>
+        <item name="color">#191926</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+
+</resources>
