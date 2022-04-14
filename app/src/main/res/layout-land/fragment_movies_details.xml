@@ -4,13 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#191926"
-        tools:context=".MovieDetailsActivity">
+        tools:context=".MoviesRoot">
 
         <ImageView
             android:id="@+id/poster"
@@ -36,7 +37,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginBottom="12dp"
-            app:layout_constraintBottom_toTopOf="@id/nameOfFilms"
+            app:layout_constraintBottom_toTopOf="@id/nameOfFilmsCard"
             app:layout_constraintStart_toEndOf="@id/guidelineStart"
             card_view:cardBackgroundColor="#191926"
             card_view:cardCornerRadius="4dp">
@@ -55,7 +56,7 @@
 
 
         <TextView
-            android:id="@+id/nameOfFilms"
+            android:id="@+id/nameOfFilmsCard"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="254dp"
@@ -115,14 +116,14 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
             app:layout_constraintStart_toEndOf="@id/guidelineStart"
-            app:layout_constraintTop_toBottomOf="@id/nameOfFilms" />
+            app:layout_constraintTop_toBottomOf="@id/nameOfFilmsCard" />
 
         <ImageView
             android:id="@+id/starIconP1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_plus"
+            android:src="@drawable/star_icon_plus12px"
             app:layout_constraintStart_toEndOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
 
@@ -132,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_plus"
+            android:src="@drawable/star_icon_plus12px"
             app:layout_constraintStart_toEndOf="@id/starIconP1"
             app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
 
@@ -142,7 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_plus"
+            android:src="@drawable/star_icon_plus12px"
             app:layout_constraintStart_toEndOf="@id/starIconP2"
             app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
 
@@ -152,7 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_plus"
+            android:src="@drawable/star_icon_plus12px"
             app:layout_constraintStart_toEndOf="@id/starIconP3"
             app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
 
@@ -162,7 +163,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_minus"
+            android:src="@drawable/star_icon_minus12px"
             app:layout_constraintStart_toEndOf="@id/starIconP4"
             app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
 

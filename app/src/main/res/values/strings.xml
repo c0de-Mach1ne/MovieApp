@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MovieApp</string>
     <string name="nameFilms">Avengers:\nEndgame</string>
+    <string name="nameFilmsCard">Avengers:Endgame</string>
     <string name="genreOfFilms">Action, Adventure, Fantasy</string>
     <string name="rating_number">125 Reviews</string>
     <string name="back">Back</string>
@@ -12,4 +13,8 @@
     <string name="name_evans">Chris\nEvans</string>
     <string name="name_ruffalo">Mark\nRuffalo</string>
     <string name="name_hemsworth">Chris\nHemsworth</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movies_list">Movies list</string>
+    <string name="timeFilms">137 MIN</string>
 </resources>
