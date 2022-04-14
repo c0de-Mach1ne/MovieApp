@@ -12,9 +12,11 @@ class MoviesRoot : AppCompatActivity(), TransmitFragment {
         binding = ActivityMovieRootBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction().apply {
-            add(R.id.frameLayoutContainer, MoviesListFragment())
-            commit()
+        if(savedInstanceState == null) {
+            supportFragmentManager.beginTransaction().apply {
+                add(R.id.frameLayoutContainer, MoviesListFragment())
+                commit()
+            }
         }
     }
 
