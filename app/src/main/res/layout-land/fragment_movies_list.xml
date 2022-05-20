@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#191926"
-        tools:context=".MoviesListFragment">
+        tools:context=".ListFragment">
 
         <TextView
             android:id="@+id/tvTitleList"
@@ -57,7 +57,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/ivPoster"
+                android:id="@+id/iv_poster_of_films"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/movie"
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
                 android:layout_marginEnd="8dp"
-                android:src="@drawable/like"
+                android:src="@drawable/neutral_like"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -95,7 +95,7 @@
                 card_view:cardCornerRadius="4dp">
 
                 <TextView
-                    android:id="@+id/ageRestrictions"
+                    android:id="@+id/tv_age_restrictions"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/roboto_black"
@@ -107,7 +107,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/genreOfFilms"
+                android:id="@+id/tv_genre_of_films"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -116,63 +116,63 @@
                 android:gravity="center_vertical"
                 android:includeFontPadding="false"
                 android:lineHeight="12sp"
-                android:text="@string/genreOfFilms"
+                android:text="@string/genre_of_films"
                 android:textColor="#FF3466"
                 android:textSize="8sp"
-                app:layout_constraintBottom_toBottomOf="@id/ivPoster"
+                app:layout_constraintBottom_toBottomOf="@id/iv_poster_of_films"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
-                android:id="@+id/starIconP1"
+                android:id="@+id/iv_starIcon_p1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:src="@drawable/star_icon_plus_8px"
-                app:layout_constraintStart_toStartOf="@+id/genreOfFilms"
-                app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
+                app:layout_constraintStart_toStartOf="@+id/tv_genre_of_films"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
             <ImageView
-                android:id="@+id/starIconP2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3.25dp"
-                android:layout_marginTop="4dp"
-                android:src="@drawable/star_icon_plus_8px"
-                app:layout_constraintStart_toEndOf="@id/starIconP1"
-                app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
-
-            <ImageView
-                android:id="@+id/starIconP3"
+                android:id="@+id/iv_starIcon_p2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3.25dp"
                 android:layout_marginTop="4dp"
                 android:src="@drawable/star_icon_plus_8px"
-                app:layout_constraintStart_toEndOf="@id/starIconP2"
-                app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
+                app:layout_constraintStart_toEndOf="@id/iv_starIcon_p1"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
             <ImageView
-                android:id="@+id/starIconP4"
+                android:id="@+id/iv_starIcon_p3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3.25dp"
                 android:layout_marginTop="4dp"
                 android:src="@drawable/star_icon_plus_8px"
-                app:layout_constraintStart_toEndOf="@id/starIconP3"
-                app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
+                app:layout_constraintStart_toEndOf="@id/iv_starIcon_p2"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
             <ImageView
-                android:id="@+id/starIconP5"
+                android:id="@+id/iv_starIcon_p4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3.25dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/star_icon_plus_8px"
+                app:layout_constraintStart_toEndOf="@id/iv_starIcon_p3"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
+
+            <ImageView
+                android:id="@+id/iv_starIcon_m5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3.25dp"
                 android:layout_marginTop="4dp"
                 android:src="@drawable/star_icon_minus_8px"
-                app:layout_constraintStart_toEndOf="@id/starIconP4"
-                app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
+                app:layout_constraintStart_toEndOf="@id/iv_starIcon_p4"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
             <TextView
-                android:id="@+id/numOfReview"
+                android:id="@+id/tv_num_of_review"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -182,11 +182,11 @@
                 android:text="@string/rating_number"
                 android:textColor="#6D6D80"
                 android:textSize="8sp"
-                app:layout_constraintStart_toEndOf="@id/starIconP5"
-                app:layout_constraintTop_toBottomOf="@id/genreOfFilms" />
+                app:layout_constraintStart_toEndOf="@id/iv_starIcon_m5"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
             <TextView
-                android:id="@+id/nameOfFilmsCard"
+                android:id="@+id/tv_name_of_film"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -199,7 +199,7 @@
                 android:textColor="@color/nameColor"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivPoster" />
+                app:layout_constraintTop_toBottomOf="@id/iv_poster_of_films" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -211,7 +211,7 @@
                 android:textColor="#565665"
                 android:textSize="8sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/nameOfFilmsCard" />
+                app:layout_constraintTop_toBottomOf="@id/tv_name_of_film" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

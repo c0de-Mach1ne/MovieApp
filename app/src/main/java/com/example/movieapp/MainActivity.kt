@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.movieapp.databinding.ActivityMovieRootBinding
 
-class MoviesRoot : AppCompatActivity(), TransmitFragment {
+class MainActivity : AppCompatActivity(), TransmitFragment {
     private lateinit var binding: ActivityMovieRootBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +14,7 @@ class MoviesRoot : AppCompatActivity(), TransmitFragment {
 
         if(savedInstanceState == null) {
             supportFragmentManager.beginTransaction().apply {
-                add(R.id.frameLayoutContainer, MoviesListFragment())
+                add(R.id.frameLayoutContainer, ListFragment())
                 commit()
             }
         }
@@ -22,7 +22,7 @@ class MoviesRoot : AppCompatActivity(), TransmitFragment {
 
     override fun moveToFragment() {
         supportFragmentManager.beginTransaction()
-            .add(R.id.frameLayoutContainer, MoviesDetailsFragment())
+            .add(R.id.frameLayoutContainer, DetailsFragment())
             .addToBackStack(null)
             .commit()
     }

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#191926"
+    tools:context=".ListFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayoutCardMovie"
+        android:layout_width="170dp"
+        android:layout_height="296dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="11dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/iv_poster_of_films"
+            android:layout_width="166dp"
+            android:layout_height="248dp"
+            android:src="@drawable/movie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:layout_width="166dp"
+            android:layout_height="248dp"
+            android:src="@drawable/gradient"
+            app:layout_constraintEnd_toEndOf="@id/iv_poster_of_films"
+            app:layout_constraintStart_toStartOf="@id/iv_poster_of_films"
+            app:layout_constraintTop_toTopOf="@id/iv_poster_of_films"
+            app:layout_constraintBottom_toBottomOf="@id/iv_poster_of_films"
+            />
+
+        <ImageView
+            android:id="@+id/iv_like_of_films"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/neutral_like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_viewAgeRestrictions"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardBackgroundColor="#191926"
+            card_view:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/tv_age_restrictions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                tools:text="@string/age"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_genre_of_films"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lineHeight="12sp"
+            tools:text="@string/genre_of_films"
+            android:textColor="#FF3466"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_poster_of_films"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="22dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_starIcon_p1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:src="@drawable/star_icon_plus_8px"
+            app:layout_constraintStart_toStartOf="@+id/tv_genre_of_films"
+            app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
+
+        <ImageView
+            android:id="@+id/iv_starIcon_p2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3.25dp"
+            android:layout_marginTop="4dp"
+            tools:src="@drawable/star_icon_plus_8px"
+            app:layout_constraintStart_toEndOf="@id/iv_starIcon_p1"
+            app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
+
+        <ImageView
+            android:id="@+id/iv_starIcon_p3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3.25dp"
+            android:layout_marginTop="4dp"
+            tools:src="@drawable/star_icon_plus_8px"
+            app:layout_constraintStart_toEndOf="@id/iv_starIcon_p2"
+            app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
+
+        <ImageView
+            android:id="@+id/iv_starIcon_p4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3.25dp"
+            android:layout_marginTop="4dp"
+            tools:src="@drawable/star_icon_plus_8px"
+            app:layout_constraintStart_toEndOf="@id/iv_starIcon_p3"
+            app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
+
+        <ImageView
+            android:id="@+id/iv_starIcon_p5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3.25dp"
+            android:layout_marginTop="4dp"
+            tools:src="@drawable/star_icon_minus_8px"
+            app:layout_constraintStart_toEndOf="@id/iv_starIcon_p4"
+            app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
+
+        <TextView
+            android:id="@+id/tv_num_of_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/roboto_black"
+            android:lineHeight="12px"
+            tools:text="@string/rating_number"
+            android:textColor="#6D6D80"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@id/iv_starIcon_p5"
+            app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
+
+        <TextView
+            android:id="@+id/tv_name_of_film"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_black"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lineHeight="20sp"
+            tools:text="@string/nameFilmsCard"
+            android:textColor="@color/nameColor"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/iv_poster_of_films"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_movie_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/timeFilms"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_of_film"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/roboto_black"
+            android:textColor="#565665"
+            android:textSize="8sp"
+            android:lineHeight="12dp"
+            android:layout_marginStart="8dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
