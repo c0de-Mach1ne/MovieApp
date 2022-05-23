@@ -7,12 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MovieCardAdapter: RecyclerView.Adapter<MovieListViewHolder>() {
 
-    private var cardFilms = listOf<CardFilms>()
+    private var cardFilms = listOf<CardMovie>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieListViewHolder {
-        val view: View = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_card_film_data, parent, false)
-        return MovieListViewHolder(view)
+        val viewCardMovie: View = LayoutInflater.from(parent.context)
+            .inflate(R.layout.view_holder_movie, parent, false)
+            return MovieListViewHolder(viewCardMovie)
     }
 
     override fun onBindViewHolder(holder: MovieListViewHolder, position: Int) {
@@ -21,7 +21,8 @@ class MovieCardAdapter: RecyclerView.Adapter<MovieListViewHolder>() {
 
     override fun getItemCount(): Int = cardFilms.size
 
-    fun bindCardFilms(newCardFilms: List<CardFilms>){
+    fun bindCardFilms(newCardFilms: List<CardMovie>){
         cardFilms = newCardFilms
     }
+
 }

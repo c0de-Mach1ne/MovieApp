@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity(), TransmitFragment {
 
         if(savedInstanceState == null) {
             supportFragmentManager.beginTransaction().apply {
-                add(R.id.frameLayoutContainer, ListFragment())
+                add(R.id.frameLayoutContainer, DetailsFragment())
                 commit()
             }
         }

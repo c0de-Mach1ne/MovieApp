@@ -16,7 +16,7 @@ private val poster: ImageView = itemView.findViewById(R.id.iv_poster_of_films)
     private val starIcon5: ImageView = itemView.findViewById(R.id.iv_starIcon_p5)
  */
 
-data class CardFilms(
+data class CardMovie(
     val name_of_films: String,
     val poster_of_cardFilms: String,
     val age_restrictions: Int,

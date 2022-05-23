@@ -1,13 +1,12 @@
 package com.example.movieapp
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.databinding.FragmentMoviesListBinding
 
@@ -26,11 +25,16 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recycler: RecyclerView = view.findViewById(R.id.rv_card_films)
+        val recycler: RecyclerView = view.findViewById(R.id.rv_card_movie)
         adapter = MovieCardAdapter()
         recycler.layoutManager = GridLayoutManager(requireContext(), 2)
         recycler.adapter = adapter
+
+        view.findViewById<Button>(R.id.btnPISYA).setOnClickListener {
+            clickListener!!.moveToFragment()
+        }
     }
+
 
     override fun onStart() {
         super.onStart()
@@ -38,19 +42,19 @@ class ListFragment : Fragment() {
     }
 
     private fun updateData() {
-        adapter.bindCardFilms(SourceCardFilms().getCardFilms())
+        adapter.bindCardFilms(SourceCardMovie().getCardMovie())
         adapter.notifyDataSetChanged()
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is TransmitFragment) {
-            clickListener = context
-        }
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        clickListener = null
-    }
+//    override fun onAttach(context: Context) {
+//        super.onAttach(context)
+//        if (context is TransmitFragment) {
+//            clickListener = context
+//        }
+//    }
+//
+//    override fun onDetach() {
+//        super.onDetach()
+//        clickListener = null
+//    }
 }

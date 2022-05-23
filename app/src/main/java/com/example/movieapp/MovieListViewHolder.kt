@@ -7,8 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class MovieListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+open class MovieListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val poster: ImageView = itemView.findViewById(R.id.iv_poster_of_films)
     private val favoriteFilm: ImageView = itemView.findViewById(R.id.iv_like_of_films)
     private val ageRestrictions: TextView = itemView.findViewById(R.id.tv_age_restrictions)
@@ -24,23 +23,51 @@ class MovieListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val starIcon5: ImageView = itemView.findViewById(R.id.iv_starIcon_p5)
 
     @SuppressLint("SetTextI18n")
-    fun onBind(cardFilms: CardFilms) {
+    fun onBind(cardMovie: CardMovie) {
         Glide.with(context)
-            .load(cardFilms.poster_of_cardFilms)
+            .load(cardMovie.poster_of_cardFilms)
             .into(poster)
 
-        if (cardFilms.isFavoriteFilm)
+        if (cardMovie.isFavoriteFilm)
             favoriteFilm.setImageResource(R.drawable.positive_like)
 
-        ageRestrictions.text = "+${cardFilms.age_restrictions}"
-        genreOfFilms.text = cardFilms.genre_of_films
-        movieLength.text = "${cardFilms.movie_length} MIN"
-        nameOfFilm.text = cardFilms.name_of_films
-        numOfReview.text = "${cardFilms.num_of_review} REVIEWS"
+        ageRestrictions.text = "+${cardMovie.age_restrictions}"
+        genreOfFilms.text = cardMovie.genre_of_films
+        movieLength.text = "${cardMovie.movie_length} MIN"
+        nameOfFilm.text = cardMovie.name_of_films
+        numOfReview.text = "${cardMovie.num_of_review} REVIEWS"
 
-//        when(cardFilms.positive_ratings){
-//
-//        }
+        when (cardMovie.positive_ratings) {
+            1 -> {
+                starIcon1.setImageResource(R.drawable.star_icon_plus_8px)
+            }
+
+            2 -> {
+                starIcon2.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon1.setImageResource(R.drawable.star_icon_plus_8px)
+            }
+
+            3 -> {
+                starIcon3.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon2.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon1.setImageResource(R.drawable.star_icon_plus_8px)
+            }
+
+            4 -> {
+                starIcon4.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon3.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon2.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon1.setImageResource(R.drawable.star_icon_plus_8px)
+            }
+
+            5 -> {
+                starIcon5.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon4.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon3.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon2.setImageResource(R.drawable.star_icon_plus_8px)
+                starIcon1.setImageResource(R.drawable.star_icon_plus_8px)
+            }
+        }
     }
 }
 
