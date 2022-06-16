@@ -83,12 +83,12 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="59dp"
             android:src="@drawable/path"
-            app:layout_constraintEnd_toStartOf="@id/TVback"
+            app:layout_constraintEnd_toStartOf="@id/tv_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/TVback"
+            android:id="@+id/tv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -123,7 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_plus12px"
+            android:src="@drawable/ic_star12dp"
             app:layout_constraintStart_toEndOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_plus12px"
+            android:src="@drawable/ic_star12dp"
             app:layout_constraintStart_toEndOf="@id/iv_starIcon_p1"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -143,7 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_plus12px"
+            android:src="@drawable/ic_star12dp"
             app:layout_constraintStart_toEndOf="@id/iv_starIcon_p2"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_plus12px"
+            android:src="@drawable/ic_star12dp"
             app:layout_constraintStart_toEndOf="@id/iv_starIcon_p3"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -163,7 +163,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/star_icon_minus12px"
+            android:src="@drawable/ic_star12dp"
             app:layout_constraintStart_toEndOf="@id/iv_starIcon_p4"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -182,7 +182,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
         <TextView
-            android:id="@+id/storyLineHeader"
+            android:id="@+id/storyline_header"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
@@ -201,7 +201,7 @@
             app:layout_constraintTop_toBottomOf="@id/iv_starIcon_p1" />
 
         <TextView
-            android:id="@+id/StorylineText"
+            android:id="@+id/tv_storyline_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -215,7 +215,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
             app:layout_constraintStart_toEndOf="@id/guidelineStart"
-            app:layout_constraintTop_toBottomOf="@id/storyLineHeader" />
+            app:layout_constraintTop_toBottomOf="@id/storyline_header" />
 
         <TextView
             android:id="@+id/castHeader"
@@ -233,7 +233,7 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@id/guidelineStart"
-            app:layout_constraintTop_toBottomOf="@id/StorylineText" />
+            app:layout_constraintTop_toBottomOf="@id/tv_storyline_description" />
 
         <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_viewDowney"
@@ -281,7 +281,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/chris_evans" />
+                tools:src="@drawable/robert_dwn" />
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -312,7 +312,7 @@
                 android:layout_height="match_parent"
                 android:paddingTop="30dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/mark_ruffalo" />
+                tools:src="@drawable/robert_dwn" />
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -343,7 +343,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/chris_hemsworth" />
+                tools:src="@drawable/robert_dwn" />
         </androidx.cardview.widget.CardView>
 
 

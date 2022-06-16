@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#191926"
     tools:context=".ListFragment">
 
 
@@ -108,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:src="@drawable/star_icon_minus_8px"
+            android:src="@drawable/ic_star8dp"
             app:layout_constraintStart_toStartOf="@+id/tv_genre_of_films"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -118,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="4dp"
-            android:src="@drawable/star_icon_minus_8px"
+            android:src="@drawable/ic_star8dp"
             app:layout_constraintStart_toEndOf="@id/iv_starIcon_p1"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -128,7 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="4dp"
-            android:src="@drawable/star_icon_minus_8px"
+            android:src="@drawable/ic_star8dp"
             app:layout_constraintStart_toEndOf="@id/iv_starIcon_p2"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -138,7 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="4dp"
-            android:src="@drawable/star_icon_minus_8px"
+            android:src="@drawable/ic_star8dp"
             app:layout_constraintStart_toEndOf="@id/iv_starIcon_p3"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -148,7 +147,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3.25dp"
             android:layout_marginTop="4dp"
-            android:src="@drawable/star_icon_minus_8px"
+            android:src="@drawable/ic_star8dp"
             app:layout_constraintStart_toEndOf="@id/iv_starIcon_p4"
             app:layout_constraintTop_toBottomOf="@id/tv_genre_of_films" />
 
@@ -174,6 +173,8 @@
             android:gravity="center_vertical"
             android:includeFontPadding="false"
             android:lineHeight="20sp"
+            android:ellipsize="end"
+            android:lines="1"
             tools:text="@string/nameFilmsCard"
             android:textColor="@color/nameColor"
             android:textSize="14sp"
@@ -181,7 +182,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"
-            />
+            tools:targetApi="p" />
 
         <TextView
             android:id="@+id/tv_movie_length"

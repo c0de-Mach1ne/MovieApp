@@ -29,25 +29,17 @@
 
     <TextView
         android:id="@+id/tv_cast_first_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_black"
-        tools:text="Robert"
+        tools:text="Robert Dw Mladshi"
+        android:lines="2"
         android:textColor="#D8D8D8"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/card_view_cast_container"
-        app:layout_constraintTop_toBottomOf="@id/card_view_cast_container" />
+        app:layout_constraintTop_toBottomOf="@id/card_view_cast_container"
+        app:layout_constraintEnd_toEndOf="@id/card_view_cast_container"/>
 
-    <TextView
-        android:id="@+id/tv_cast_second_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_black"
-        tools:text="Downey Jr."
-        android:textColor="#D8D8D8"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/tv_cast_first_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_cast_first_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

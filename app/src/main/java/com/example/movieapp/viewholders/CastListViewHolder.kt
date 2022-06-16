@@ -1,23 +1,23 @@
-package com.example.movieapp
+package com.example.movieapp.viewholders
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.movieapp.R
+import com.example.movieapp.model.Actor
 
 class CastListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    private val firstName: TextView = itemView.findViewById(R.id.tv_cast_first_name)
-    private val secondName: TextView = itemView.findViewById(R.id.tv_cast_second_name)
+    private val fullName: TextView = itemView.findViewById(R.id.tv_cast_first_name)
     private val castAvatar: ImageView = itemView.findViewById(R.id.iv_cast_avatar)
 
-    fun onBind(casts: Casts) {
+    fun onBind(actors: Actor) {
         Glide.with(context)
-            .load(casts.avatar)
+            .load(actors.imageUrl)
             .into(castAvatar)
 
-        firstName.text = casts.firstName
-        secondName.text = casts.secondName
+        fullName.text = actors.name
     }
 }
 
